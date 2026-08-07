@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  autonomous-platform:
+    build: .
+    container_name: ai-business-platform
+    restart: "no"
+    volumes:
+      - ./output:/app/output
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
